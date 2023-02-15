@@ -741,6 +741,7 @@ label {
 .list-reset {
     list-style: none;
     padding: 0;
+    
 }
 
 .text-left {
@@ -1740,6 +1741,7 @@ main {
     display: inline-flex;
     justify-content: center;
     
+    
 }
 
 .footer-brand,
@@ -1747,10 +1749,11 @@ main {
 .footer-social-links {
     margin-bottom: 24px
     
+    
 }
 
-.footer-links li+li,
-.footer-social-links li+li {
+.footer-links li,
+.footer-social-links li {
     margin-left: 16px;
 }
 
