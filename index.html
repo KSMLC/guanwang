@@ -1,38 +1,282 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=11" id="mixia_vpid">
-    <title>KS-MLC作者页</title>
-    <meta name="keywords" content="个人主页">
-    <meta name="description" content="个人引导页">
-    <link rel="icon" href="./image/ksmlc.ico">
-    <link rel="shortcut icon" href="./image/ksmlc.ico">
-    <link rel="stylesheet" type="text/css" href="./CSS/ZuoZheYe.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="./guanwang/image/ksmlc.ico">
+    <title>KS-MLC | 个人介绍</title>
+    <meta name="description" content="期待与更多的人相遇！">
+    <meta name="keywords" content="个人网站 博客">
+    <link rel="apple-touch-icon-precomposed" href="./guanwang/image/ksmlc1.png">
+    <link rel="stylesheet" type="text/css" href="./gerenjieshao/css/h.9c69ed6c.css">
+    <link rel="stylesheet" type="text/css" href="./gerenjieshao/css/nekotora.99cf6f8c.css">
 </head>
 
 <body>
-    <div class="content">
-        <div class="title">KS-MLC</div>
-        <hr class="hr">
-        <div class="container">
-            <span id="hitokoto">陌生人，你好，我是网页的创作者，之前由于没有实力的原因，所以本网站寄托在GitHub上，近期GitHub加载过慢，不得不更换服务器，现网页已经搭建好了网址是：<a href="http://ksmlc.my3v.work/" style="color: #aaa;text-decoration: none;">http://ksmlc.my3v.work/ksmlc</a>，点击链接或下列按钮前往最新官网。</span>
-        </div>
-        
-        <hr class="hr">
-        <nav class="cover-navigation cover-navigation--primary">
-            <ul class="navigation">
-                <li class="navigation__item"><a href="http://ksmlc.my3v.work/" target="_blank" title="">立即前往</a></li>
-            </ul>
-        </nav>
+    <style>
+        .toast-bottom-center {
+            position: absolute;
+            left: 30px;
+            right: 10px;
+            top: 20px;
+        }
+    </style>
+
+    <div class="background">
+        <canvas id="startrack"></canvas>
+        <div class="cover"></div>
     </div>
-    <body>
-        <div class="landscape"></div>
-        <div class="filter"></div>
-        <canvas id="canvas" width="1366" height="638"></canvas>
-        <script type="text/javascript" src="./JS/ZuoZheYe.js"></script>
-    </body>
+    <div class="main">
+        <div class="ch intro">
+            <div class="container">
+                <div class="hello">
+                    <h1 id="slogan" style="font-size: 17px;">思考中...</h1>
+                    <h2>
+                        <div class="circle"> <span></span> <span></span>
+                            <span></span>
+                        </div>KS-MLC | 个人介绍
+                    </h2>
+                    <h2>向上滑动</h2>
+                </div>
+            </div>
+        </div>
+        <div class="ch about">
+            <div class="container">
+                <h2 class="chtitle">Who is <span>KS-MLC</span>？</h2>
+                <div class="clear">
+                    <div class="introduct">
+                        <img class="avatar" src="./guanwang/image/ksmlc1.png">
+                        <p id="content">原以为以我的能力能保护好身边的事物，当失去的时候才知道我是多么的无助，从那天起，我的梦想不再是一名程序员，也许是比程序员高一个档次的黑客。</p>
+                        <p style="padding-bottom:1em;">A flower may bloom again, but a man will never be young again.!</p>
+                        <p>你好，这里是KS-MLC<sup>莫</sup>制作的网页，我可能是一个人，也可能是一群人，现在正在尝试网络安全/Web开发/APP开发相关工作。</p>
+                        <p>希望能与你在浩瀚的宇宙之下相见！</p>
+                        <div class="chatbox">
+                            <div class="line loading"> <span></span>
+                                <span></span> <span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="skill clear">
+                        <li>
+                            <p>HTML5/CSS3</p>
+                            <div class="progress">
+                                <div style="width:80%;background-image: linear-gradient(to bottom right, #990066, #336699);"></div>
+                                <span>制作网站程度的能力</span>
+                            </div>
+                        </li>
+                        <li>
+                            <p>JavaScript</p>
+                            <div class="progress">
+                                <div style="width:25%;background-image:linear-gradient(to bottom left,#333399,#009999);"></div>
+                                <span>使用JS的能力</span>
+                            </div>
+                        </li>
+                        <li>
+                            <p>PHP</p>
+                            <div class="progress">
+                                <div style="width:10%;background-image:linear-gradient(to bottom left,#990066, #FF9900);"></div>
+                                <span>对PHP的熟悉度</span>
+                            </div>
+                        </li>
+                        <li>
+                            <p>Python</p>
+                            <div class="progress">
+                                <div style="width:65%;background-image:linear-gradient(to bottom left,#FF6600, #F00000);">
+                                </div><span>对Python的熟悉度及赞美</span>
+                            </div>
+                        </li>
+                        <li>
+                            <p>盗墓笔记</p>
+                            <div class="progress">
+                                <div style="width:94%;background-image:linear-gradient(to bottom left,#990066, #336699);"></div>
+                                <span>对盗墓笔记的热爱</span>
+                            </div>
+                        </li>
+                        <li>
+                            <p>鬼吹灯</p>
+                            <div class="progress">
+                                <div style="width:87%;"></div>
+                                <span>对鬼吹灯的热爱</span>
+                            </div>
+                        </li>
+                        <li>
+                            <p>电脑游戏</p>
+                            <div class="progress">
+                                <div style="width:82%;"></div>
+                                <span>对电脑游戏的热爱</span>
+                            </div>
+                        </li>
+                        <li>
+                            <p>手机游戏</p>
+                            <div class="progress">
+                                <div style="width:60%;"></div>
+                                <span>对手机游戏的热爱</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="find ch">
+            <div class="container links">
+                <h2 class="chtitle">KS-MLC生活的<span>地方</span><br><i style="font-size: 20px;">APP下载密码：<span>ksmlc</span></i></h2><br>
+                <div class="clear col-3">
+                    <a href="./guanwang/index.html" target="_blank">
+                        <div class="item">
+                            <div class="bg" style="background-image:linear-gradient(to bottom left,#333399,#009999);"></div>
+                            <div class="inner"> <span>官网</span> </div>
+                        </div>
+                    </a>
+                    <a href="./guanwang/html/WoDeWanPangPro.html" target="_blank">
+                        <div class="item">
+                            <div class="bg" style="background-image:linear-gradient(to bottom right, #333399,#663399);"></div>
+                            <div class="inner"> <span>我的网盘</span> </div>
+                        </div>
+                    </a>
+                    <a href="https://t.me/t2760460838" target="_blank">
+                        <div class="item">
+                            <div class="bg" style="background-image:linear-gradient(to bottom right, #990066, #336699);"></div>
+                            <div class="inner"> <span>Telegram</span> </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="clear">
+                    <a href="https://wwab.lanzoue.com/b03dvcn0d" target="_blank">
+                        <div class="item">
+                            <div class="bg" style="background-image:linear-gradient(to bottom right, #FF6600, #F00000);"></div>
+                            <div class="inner"> <span>KS软件库APP</span> </div>
+                        </div>
+                    </a>
+                     <a href="https://wwab.lanzoue.com/b03dzm4ud" target="_blank">
+                        <div class="item">
+                            <div class="bg" style="background-image:linear-gradient(to bottom right, #990066, #FF9900);"></div>
+                            <div class="inner"> <span>KS-MLC网页APP</span> </div>
+                        </div>
+                    </a>
+                    <a href="https://qm.qq.com/cgi-bin/qm/qr?k=z2Txco99RWYmjxftsTIzzWLw9dVsYZHY&noverify=0&personal_qrcode_source=3" target="_blank">
+                        <div class="item">
+                            <div class="bg" style="background-color:#28a9e0"></div>
+                            <div class="inner"> <i class="icon-qq"></i>
+                                <span>QQ</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="mailto:2760460838@qq.com" target="_blank">
+                        <div class="item">
+                            <div class="bg" style="background-color:#28a9e0"></div>
+                            <div class="inner"> <i class="icon-mail"></i> <span>Mail</span> </div>
+                        </div>
+                    </a>
+                    <a href="https://weibo.com/u/7745622888" target="_blank">
+                        <div class="item">
+                            <div class="bg" style="background-image:linear-gradient(to bottom right, #990066, #FF9900);"></div>
+                            <div class="inner"> <i class="icon-weibo"></i> <span>Weibo</span> </div>
+                        </div>
+                    </a>
+                    <a href="https://b23.tv/7W6mhiJ" target="_blank">
+                        <div class="item">
+                            <div class="bg" style="background-color:#f9a2a8"></div>
+                            <div class="inner"> <i class="icon-bilibili"></i>
+                                <span>Bilibili</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://v.douyin.com/SRHAGHJ/" target="_blank">
+                        <div class="item">
+                            <div class="bg" style="background-color:#28a9e0"></div>
+                            <div class="inner"> <i class="icon-twitter"></i> <span>抖音</span> </div>
+                        </div>
+                    </a>
+                    <a href="https://v.kuaishou.com/J4jlsA" target="_blank">
+                        <div class="item">
+                            <div class="bg" style="background-color:#0f88eb"></div>
+                            <div class="inner"> <i class="icon-zhihu"></i>
+                                <span>快手</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://greasyfork.org/zh-CN/users/954101-ks-mlc" target="_blank">
+                        <div class="item">
+                            <div class="bg" style="background-color:#f09199"></div>
+                            <div class="inner"> <i class="icon-bookmark"></i> <span>油猴</span> </div>
+                        </div>
+                    </a> <a href="http://www.coolapk.com/u/17009084" target="_blank">
+                        <div class="item">
+                            <div class="bg" style="background-color:#f12d35"></div>
+                            <div class="inner"> <i class="icon-netease_music"></i>
+                                <span>酷安</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://github.com/KSMLC" target="_blank">
+                        <div class="item">
+                            <div class="bg" style="background-color:#353535"></div>
+                            <div class="inner"> <i class="icon-github"></i> <span>Github</span> </div>
+                        </div>
+                    </a>
+                    <a href="https://twitter.com/molechun?s=09" target="_blank">
+                        <div class="item">
+                            <div class="bg" style="background-color:#b600ff"></div>
+                            <div class="inner"> <i class="icon-instagram"></i> <span>Twitter</span> </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="gate ch">
+            <div class="container links">
+                <h2 class="chtitle">我的<span>好</span>兄弟们</h2>
+                <div class="clear"> <a href="/" target="_blank">
+                        <div class="item">
+                            <div class="avatar"> <img src=""> </div>
+                            <div class="inner">
+                                <h5>未知</h5>
+                                <p>未知</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/" target="_blank">
+                        <div class="item akarin">
+                            <div class="avatar"> <img src=""> </div>
+                            <div class="inner">
+                                <h5><span style="opacity:.3">未知</span></h5>
+                                <p>未知</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/" target="_blank">
+                        <div class="item">
+                            <div class="avatar"> <img src=""> </div>
+                            <div class="inner">
+                                <h5>未知</h5>
+                                <p>未知</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/" target="_blank">
+                        <div class="item">
+                            <div class="avatar"> <img src=""> </div>
+                            <div class="inner">
+                                <h5>未知</h5>
+                                <p>未知</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer ch">
+        <div class="container">
+            <h3>KS-MLC</h3>
+            <p>我们正在征途的路上</p>
+            <p class="c"><a href="/">Parting is for a better reunion</a></p>
+        </div>
+    </div>
+    <script src="./gerenjieshao/js/page.3a0791a3.js"></script>
+    <script type="text/javascript" src="./gerenjieshao/js/stats.js" charset="UTF-8">
+</body>
 
 </html>
